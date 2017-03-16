@@ -1,0 +1,132 @@
+{
+	"pois": [{
+		"type": "church",
+		"name": "Izbégi templom",
+		"page": "izbegi-templom",
+		"image": "Izbegi_templom_1.jpg",
+		"formatted_address": "Szentendre, Templom u. 2.",
+		"lat": "47.6766939",
+		"lng": "19.06172449999997"
+	}, {
+		"type": "church",
+		"name": "Református templom",
+		"page": "reformatus-templom",
+		"image": "reformatus-templom.jpg",
+		"formatted_address": "Szentendre, Szentendrei Református Egyházközség, Rákóczi Ferenc u. 14.",
+		"lat": "47.6687051",
+		"lng": "19.07366460000003"
+	}, {
+		"type": "church",
+		"name": "Keresztelő Szent János katolikus plébániatemplom",
+		"page": "szent-janos-templom",
+		"image": "Szentendre-Templom-domb.jpg",
+		"formatted_address": "Szentendre, Templom tér",
+		"lat": "47.6682014",
+		"lng": "19.07553000000007"
+	}, {
+		"type": "museum",
+		"name": "Czóbel Béla Múzeum",
+		"page": "czobel-muzeum",
+		"image": "czobel-muzeum.jpg",
+		"formatted_address": "Szentendre, Templom tér 1.",
+		"lat": "47.66845569999999",
+		"lng": "19.07519179999997"
+	}, {
+		"type": "museum",
+		"name": "Ferenczy Múzeum",
+		"page": "ferenczy-muzeum",
+		"image": "ferenczy-muzeum.jpg",
+		"formatted_address": "Szentendre",
+		"lat": "47.664343",
+		"lng": "19.07610599999998"
+	}, {
+		"type": "museum",
+		"name": "Szentendre Skanzen Village Museum",
+		"page": "skanzen",
+		"image": "skanzen.jpg",
+		"formatted_address": "Szentendre, Sztaravodai út",
+		"lat": "47.69226880000001",
+		"lng": "19.04541130000007"
+	}, {
+		"type": "art-gallery",
+		"name": "Kutas Galéria",
+		"page": "kutas-galeria",
+		"image": "",
+		"formatted_address": "Szentendre, Péter Pál u. 3.",
+		"lat": "47.66688420000001",
+		"lng": "19.076556600000004"
+	}, {
+		"type": "art-gallery",
+		"name": "Old Goat Art Gallery",
+		"page": "old-goat",
+		"image": "",
+		"formatted_address": "Szentendre, Dumtsa Jenő u. 15, 2000 Hungary",
+		"lat": "47.66587309999999",
+		"lng": "19.076037100000008"
+	}, {
+		"type": "art-gallery",
+		"name": "Palmetta Design Gallery",
+		"page": "palmetta-design",
+		"image": "",
+		"formatted_address": "Szentendre, Bogdányi út 14.",
+		"lat": "47.6690078",
+		"lng": "19.077322200000026"
+	}, {
+		"type": "art-gallery",
+		"name": "Vajda Lajos Studio",
+		"page": "vajda-studio",
+		"image": "",
+		"formatted_address": "Szentendre, Péter Pál u. 6.",
+		"lat": "47.6671034",
+		"lng": "19.076617199999987"
+	}, {
+		"type": "art-gallery",
+		"name": "MANK Galéria - Szentendrei Régi Művésztelep",
+		"page": "mank-galeria",
+		"image": "",
+		"formatted_address": "Szentendre, Bogdányi út 51.",
+		"lat": "47.6737547",
+		"lng": "19.078360599999996"
+	}],
+
+	"artworks": [
+    {
+      "title": "Izbégi templom",
+      "poi": "izbegi-templom",
+      "image": "czobel-izbegi-templom.jpg",
+      "artist": "czobel"
+    }, {
+      "title": "Keresztelő Szent János katolikus plébániatemplom",
+      "poi": "szent-janos-templom",
+      "image": "benkovits-templom-ter.jpg",
+      "artist": "benkovits"
+    }
+  ],
+
+	"artists": [
+    {
+      "page": "czobel",
+      "name": "Czóbel Béla",
+      "life": "Id nam odio natum malorum, tibique copiosae expetenda mel ea. Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam. Id nam odio natum malorum, tibique copiosae expetenda mel ea.",
+      "image": "czobel.jpg"
+    }, {
+      "page": "benkovits",
+      "name": "Benkovits György",
+      "life": "Id nam odio natum malorum, tibique copiosae expetenda mel ea. Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam. Id nam odio natum malorum, tibique copiosae expetenda mel ea.",
+      "image": "benkovits.jpg"
+    }
+  ],
+
+	"artist": {
+    "czobel": {
+      "name": "Czóbel Béla",
+      "life": "Id nam odio natum malorum, tibique copiosae expetenda mel ea. Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam. Id nam odio natum malorum, tibique copiosae expetenda mel ea.",
+      "image": "czobel.jpg"
+    },
+    "benkovits": {
+      "name": "Benkovits György",
+      "life": "Id nam odio natum malorum, tibique copiosae expetenda mel ea. Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam. Id nam odio natum malorum, tibique copiosae expetenda mel ea.",
+      "image": "benkovits.jpg"
+    }
+  }
+}

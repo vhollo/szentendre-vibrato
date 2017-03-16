@@ -1,0 +1,127 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-view3">
+
+  <template>
+
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #757575;
+      }
+      .circle {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background: #ddd;
+        line-height: 64px;
+        font-size: 30px;
+        color: #555;
+        text-align: center;
+      }
+      h1 {
+        font-size: 22px;
+        margin: 16px 0;
+        color: #212121;
+      }
+    </style>
+
+    <app-route
+        route="[[route]]"
+        pattern="/:artist"
+        data="{{routeData}}"></app-route>
+
+    <firebase-query
+      path="/artists"
+      data="{{artists}}">
+    </firebase-query>
+    
+    <firebase-query
+      path="/artist/[[routeData.artist]]"
+      data="{{artist}}">
+    </firebase-query>
+<!--
+      order-by-child="page"
+      equal-to="[[routeData.artist]]"
+-->
+    
+    <template is="dom-if" if="[[artist.length]]">
+      <div class="card">
+        <h1>[[artist.name]]</h1>
+        <p>Hosszabb leírás <b>[[artist.name]]</b> életéről. <br>
+        Képei sorakoznak, ezeken Szentendre-vonatkozású épületek, helyszínek.<br><br>
+        Id nam odio natum malorum, tibique copiosae expetenda mel ea. Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam. Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+
+        <firebase-query
+          path="/artworks"
+          order-by-child="artist"
+          equal-to="[[artist.page]]"
+          data="{{artworks}}">
+        </firebase-query>
+        <template is="dom-repeat" items="[[artworks]]" as="artwork">
+          <figure>
+            <a href="/view3/[[artwork.artist]]">
+              <img src="/images/[[artwork.image]]" />
+              <figcaption>[[_getArtistName(artwork.artist)]]</figcaption>
+            </a>
+          </figure>
+        </template>
+      </div>
+    </template>
+
+    <template is="dom-repeat" items="[[artists]]" as="item">
+      <div class="card">
+        <div class="circle" style="background-image:url('/images/[[item.image]]');background-size:cover;"></div>
+        <h1><a href="/view3/[[item.page]]">[[item.name]]</a></h1>
+        <p>Rövid leírás <b>[[item.name]]</b> érdekességeiről. <br>
+        Id nam odio natum malorum, tibique copiosae expetenda mel ea. Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam. Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+      </div>
+    </template>
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-view3',
+      
+      properties: {
+        
+        artist: Object
+        
+      },
+        
+      observers: [
+        '_log(artist)'
+      ],
+
+      _log(log) {
+        console.log(log);
+        return true;
+      }
+      
+    });
+
+  </script>
+
+</dom-module>
