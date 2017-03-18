@@ -108,8 +108,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         flex-shrink: 0;
       }
       
-      [hidden] {
-        display: none!important;
+      [canhide] {
+        transition-duration: .5s;
+      }
+      [hidden], [hideme] {
+        /*display: none!important;*/
+        height:0;
       }
 
     </style>
@@ -147,13 +151,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <a class="logo" href="/view1"><img src="/images/szentendre-hh200x64.png" /></a>
             <div id="tabContainer">
-              <paper-tabs scrollable selected="{{page}}" attr-for-selected="name" role="navigation" fit-container noink hidden="[[smallScreen]]">
+              <paper-tabs scrollable selected="{{page}}" attr-for-selected="name" role="navigation" fit-container noink hidden="[[smallScreen]]" canhide>
                 <template is="dom-repeat" items="[[menuitems]]" as="menu" initial-count="8">
                   <paper-tab link name="[[menu.page]]"><a href="/[[menu.url]]">[[menu.title]]</a></paper-tab>
                 </template>
               </paper-tabs>
             </div>
-            <paper-icon-button id="menuicon" icon="menu" drawer-toggle hidden="[[!smallScreen]]"></paper-icon-button>
+            <paper-icon-button id="menuicon" icon="menu" drawer-toggle hidden="[[!smallScreen]]" canhide></paper-icon-button>
           </app-toolbar>
         </app-header>
 

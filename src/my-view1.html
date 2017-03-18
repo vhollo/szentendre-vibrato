@@ -22,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../bower_components/iron-icons/image-icons.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
-<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/geo-location/geo-location.html">
 
@@ -59,8 +59,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         max-width: 50%;
         overflow-y: auto;
         padding: 8px;
-        height:auto;
-        transition-duration: .25s;
+        /*height:auto;*/
+        transition: .25s ease-out;
         left: -50%;
         background-color: rgba(255,255,255,.75);
       }
@@ -73,8 +73,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply(--layout-end-justified);
       }
       
-      .areawithclose div {
+      .areawithclose header {
         width:100%;
+        align-self: center;
       }
       
       #svg-museum {
@@ -89,8 +90,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       iron-selector {
       }
       
-      iron-selector paper-icon-item {
-        margin-bottom:2px;
+      iron-selector paper-icon-item + paper-icon-item {
+        margin-top:2px;
       }
       
       iron-selector .iron-selected {
@@ -100,6 +101,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       paper-icon-item {
       }
       
+      paper-icon-item:focus:before {
+        background: none;
+      }
+
+      paper-item {
+        background-color: var(--app-primary-color);
+      }
+
+      paper-item + paper-item {
+        margin-top:2px;
+      }
+
     </style>
 
     <firebase-query
@@ -117,7 +130,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 api-key="AIzaSyDqVeQAskcehi8-sqM_rBt2qOhFoIM87-Q" 
                 zoom="{{zoom}}" 
                 single-info-window
-                styles="[[mapstylesarray.evenlighter]]" 
+                styles="[[mapstylesarray.outspoken]]"
                 latitude="{{lat}}"
                 longitude="{{lng}}"
                 -latitude="47.66689365067644" 
@@ -184,15 +197,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <paper-card id="papercard" elevation="2" heading="">
       <div class="areawithclose">
-        <div>
-          <template is="dom-repeat" items="[[closepois]]">
-            <p>[[item.name]]</p>
-          </template>
-        </div>
+        <header>Segítőd</header>
         <paper-icon-button noink icon="close" on-tap="_closeCard"></paper-icon-button>
       </div>
+      <div>
+        <template is="dom-repeat" items="[[closepois]]">
+          <paper-item>[[item.name]]</paper-item>
+        </template>
+      </div>
 
-      <iron-selector multi selected-items="{{filteritems}}" selected-values="[[initfilter]]" attr-for-selected="name">
+      <iron-selector hidden="[[closepois.length]]" multi selected-items="{{filteritems}}" selected-values="[[initfilter]]" attr-for-selected="name">
         <template is="dom-repeat" items="[[types]]">
           <paper-icon-item name="[[item.type]]" label="[[item.label]]">
             <iron-icon src="[[item.icon]]" item-icon></iron-icon>
@@ -1058,11 +1072,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
         }
         if (temp.length) {
-          this.set('zoom', 18);
+          this.set('zoom', 19);
           this._openCard();
         } else {
           this.set('zoom', 16);
-          this._closeCard();
+          //this._closeCard();
         }
         this.set('closepois', temp);
       },
