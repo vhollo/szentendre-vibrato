@@ -1,0 +1,14 @@
+{
+  "name": "jimp",
+  "homepage": "https://github.com/oliver-moran/jimp",
+  "version": "0.2.27",
+  "_release": "0.2.27",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.27",
+    "commit": "2dbb58f974dbd4f6639ca05edfd5a1f4eb1efd64"
+  },
+  "_source": "https://github.com/oliver-moran/jimp.git",
+  "_target": "*",
+  "_originalSource": "oliver-moran/jimp"
+}
