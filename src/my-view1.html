@@ -24,6 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-localstorage/iron-localstorage.html">
 <link rel="import" href="../bower_components/geo-location/geo-location.html">
 
 <dom-module id="my-view1">
@@ -120,12 +121,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       data="{{pois}}">
     </firebase-query>
     
+    <firebase-document
+      path="/users/[[myuserid]]"
+      data="{{myloc}}">
+    </firebase-document>
+<!--
+    <firebase-query
+      path="/users/vhollo"
+      data="qwertz">
+    </firebase-query>
+<!--
+      path="/users/[[myuserid]]"
+      data="{{myloc}}">
+-->
+    
+    <firebase-query
+      path="/users"
+      data="{{othersloc}}">
+    </firebase-query>
+    
     <geo-location latitude="{{poslat}}"
                   longitude="{{poslng}}"
+                  position="{{position}}"
                   watch-pos
                   log="[[_log('geo:',poslat,poslng)]]"
                   high-accuracy></geo-location>
     
+    <iron-localstorage name="myuserid"
+      value="{{myuserid}}"
+    ></iron-localstorage>
+<!--      on-iron-localstorage-load-empty="initializeDefaultLocation"-->
+
     <google-map id="map"
                 api-key="AIzaSyDqVeQAskcehi8-sqM_rBt2qOhFoIM87-Q" 
                 zoom="{{zoom}}" 
@@ -303,6 +329,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         
         poslat: String,
         poslng: String,
+        position: Object,
+        
+        othersloc: Array,
         
         zoom: {
           type: Number,
@@ -1049,7 +1078,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
       observers: [
         '_newPos(poslat,poslng)',
-        '_newPos(lat,lng)'
+        '_newPos(lat,lng)',
+        '_myPos(position)',
+        '_othersLoc(othersloc)'
       ],
       
       ready: function() {
@@ -1079,6 +1110,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           //this._closeCard();
         }
         this.set('closepois', temp);
+      },
+      
+      _othersLoc: function(others) {
+console.log(others);
+        
+      },
+      
+      _myPos: function(mypos) {
+        if (mypos) {
+          if (!this.myuserid) this.set('myuserid', mypos.timestamp);
+          this.set('myloc', mypos.coords);
+        }
       },
       
       _newPos: function(poslat,poslng) {
