@@ -1,7 +1,11 @@
 {
 	"poi": [
 		{
-			"name": ["Nagyenyed","Myrna lakása"],
+			"name": [
+				"Nagyenyed",
+				"Myrna lakása",
+				"Lugosi Viki"
+			],
 			"address": "Nagyenyed u. 15/a.",
 			"function": [
 				"Kiadó"
