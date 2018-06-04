@@ -16,6 +16,19 @@
 				"Lukács úr",
 				"Myrna"
 			]
+		},
+		{
+			"name": [
+				"Villányiút"
+			],
+			"address": "1113 Villányi út 60.",
+			"function": [],
+			"builder": []
+		},
+		{
+			"name": [],
+			"function": [],
+			"builder": []
 		}
 	],
 	"person": [
