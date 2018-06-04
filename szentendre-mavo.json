@@ -1,7 +1,10 @@
 {
 	"poi": [
 		{
-			"name": "Bello u."
+			"name": [
+				"Bello u.",
+				"Bello St."
+			]
 		}
 	],
 	"person": [],
