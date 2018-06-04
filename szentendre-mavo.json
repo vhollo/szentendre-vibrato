@@ -11,41 +11,11 @@
 				"Lukács",
 				"Myrna"
 			]
-		},
-		{
-			"name": [],
-			"builder": [],
-			"function": []
-		},
-		{
-			"name": [],
-			"builder": [],
-			"function": []
-		},
-		{
-			"name": [],
-			"builder": [],
-			"function": []
-		},
-		{
-			"name": [],
-			"builder": [],
-			"function": []
 		}
 	],
 	"person": [],
 	"photo": [],
 	"admin-category": "person",
-	"category": "person",
-	"collection": [
-		{
-			"name": "Első személy NEVE"
-		},
-		{
-			"name": "Második személy"
-		},
-		{
-			"name": "Harmadik személy"
-		}
-	]
+	"category": "poi",
+	"collection": []
 }
