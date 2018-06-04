@@ -1,12 +1,11 @@
 {
 	"poi": [
 		{
-			"name": [
-				"Myrna lakása",
-				"Nagyenyed"
-			],
+			"name": [],
 			"address": "Nagyenyed u. 15/a.",
-			"function": "Kiadó",
+			"function": [
+				"Kiadó"
+			],
 			"builder": [
 				"Orsi",
 				"Lukács",
@@ -14,37 +13,39 @@
 			]
 		},
 		{
-			"name": [
-				"Bello u.",
-				"Bello St."
-			],
-			"builder": []
-		},
-		{
-			"name": [
-				"Yello u.",
-				"Yello St."
-			],
-			"builder": []
-		},
-		{
-			"name": [
-				"Bello u."
-			],
-			"builder": []
+			"name": [],
+			"builder": [],
+			"function": []
 		},
 		{
 			"name": [],
-			"builder": []
+			"builder": [],
+			"function": []
+		},
+		{
+			"name": [],
+			"builder": [],
+			"function": []
+		},
+		{
+			"name": [],
+			"builder": [],
+			"function": []
 		}
 	],
 	"person": [],
 	"photo": [],
 	"admin-category": "person",
-	"category": "poi",
+	"category": "person",
 	"collection": [
 		{
-			"name": "Első személy"
+			"name": "Első személy NEVE"
+		},
+		{
+			"name": "Második személy"
+		},
+		{
+			"name": "Harmadik személy"
 		}
 	]
 }
