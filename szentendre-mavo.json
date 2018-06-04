@@ -43,30 +43,16 @@
 	],
 	"photo": [
 		{
-			"title": "Első fénykép",
-			"src": [
-				"C:\\fakepath\\fbpost-180521.png",
-				":\\fakepath\\fbpost-180521.png"
-			]
-		},
-		{
 			"title": "Új fénykép",
 			"src": []
 		}
 	],
 	"preview": [
 		{
-			"name": "Előnézet"
+			"name": "Előnézet",
+			"address": "Előcím",
+			"builder": "Előépíttetők"
 		}
 	],
-	"category": "poi",
-	"collection": [
-		{
-			"poi": "Előnézet",
-			"name": "Előnézet",
-			"address": "Előnézet",
-			"function": "Előnézet",
-			"builder": "Előnézet"
-		}
-	]
+	"category": "poi"
 }
