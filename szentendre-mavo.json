@@ -2,29 +2,40 @@
 	"poi": [
 		{
 			"name": [
-				"Yello Str."
+				"Myrna lakása",
+				"Nagyenyed"
 			],
-			"address": "Villányi út 60."
+			"address": "Nagyenyed u. 15/a.",
+			"function": "Kiadó",
+			"builder": [
+				"Orsi",
+				"Lukács",
+				"Myrna"
+			]
 		},
 		{
 			"name": [
 				"Bello u.",
 				"Bello St."
-			]
+			],
+			"builder": []
 		},
 		{
 			"name": [
 				"Yello u.",
 				"Yello St."
-			]
+			],
+			"builder": []
 		},
 		{
 			"name": [
 				"Bello u."
-			]
+			],
+			"builder": []
 		},
 		{
-			"name": []
+			"name": [],
+			"builder": []
 		}
 	],
 	"person": [],
