@@ -1,6 +1,16 @@
 {
-	"poi": [{"name": "Bello Blvd"}],
+	"poi": [
+		{
+			"name": "Bello St."
+		}
+	],
 	"person": [],
 	"photo": [],
-	"admin-category": "person"
+	"admin-category": "person",
+	"category": "poi",
+	"collection": [
+		{
+			"name": "Első személy"
+		}
+	]
 }
