@@ -44,10 +44,14 @@
 	"photo": [
 		{
 			"title": "Első fénykép",
-			"src": "C:\\fakepath\\fbpost-180523.png"
+			"src": [
+				"C:\\fakepath\\fbpost-180521.png",
+				":\\fakepath\\fbpost-180523.png"
+			]
 		},
 		{
-			"title": "Új fénykép"
+			"title": "Új fénykép",
+			"src": []
 		}
 	],
 	"preview": [
