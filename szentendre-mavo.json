@@ -1,6 +1,9 @@
 {
 	"poi": [
 		{
+			"name": "Yello Str."
+		},
+		{
 			"name": [
 				"Bello u.",
 				"Bello St."
@@ -16,7 +19,8 @@
 			"name": [
 				"Bello u."
 			]
-		}
+		},
+		{}
 	],
 	"person": [],
 	"photo": [],
