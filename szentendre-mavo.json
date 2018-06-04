@@ -44,7 +44,9 @@
 	"photo": [
 		{
 			"title": "Új fénykép",
-			"src": []
+			"src": [
+				"C:\\fakepath\\fbpost-180528.png"
+			]
 		}
 	],
 	"preview": [
@@ -54,5 +56,5 @@
 			"builder": "Előépíttetők"
 		}
 	],
-	"category": "poi"
+	"category": "photo"
 }
