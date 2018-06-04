@@ -44,11 +44,14 @@
 	"photo": [
 		{
 			"title": "Első fénykép",
-			"src": "C:\\fakepath\\fbpost-180521.png"
+			"src": [
+				"C:\\fakepath\\fbpost-180521.png",
+				":\\fakepath\\fbpost-180521.png"
+			]
 		},
 		{
 			"title": "Új fénykép",
-			"src": ""
+			"src": []
 		}
 	],
 	"preview": [
@@ -56,5 +59,14 @@
 			"name": "Előnézet"
 		}
 	],
-	"category": "photo"
+	"category": "poi",
+	"collection": [
+		{
+			"poi": "Előnézet",
+			"name": "Előnézet",
+			"address": "Előnézet",
+			"function": "Előnézet",
+			"builder": "Előnézet"
+		}
+	]
 }
