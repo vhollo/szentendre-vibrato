@@ -41,8 +41,18 @@
 			"name": "Második személy"
 		}
 	],
-	"photo": [],
+	"photo": [
+		{
+			"title": "Első fénykép",
+			"src": "C:\\fakepath\\fbpost-180525.png"
+		}
+	],
 	"admin-category": "person",
-	"category": "poi",
-	"collection": []
+	"category": "photo",
+	"collection": [],
+	"preview": [
+		{
+			"name": "Előnézet"
+		}
+	]
 }
