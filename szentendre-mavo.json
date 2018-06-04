@@ -1,6 +1,7 @@
 {
+	"admin.category": "poi",
 	"poi": [],
 	"person": [],
 	"photo": [],
-	"admin-category": "person"
+	"admin-category": "photo"
 }
