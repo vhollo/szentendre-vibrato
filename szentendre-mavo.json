@@ -12,7 +12,7 @@
 			],
 			"builder": [
 				"Orsi",
-				"Lukács",
+				"Lukács úr",
 				"Myrna"
 			]
 		}
@@ -27,6 +27,6 @@
 	],
 	"photo": [],
 	"admin-category": "person",
-	"category": "person",
+	"category": "poi",
 	"collection": []
 }
