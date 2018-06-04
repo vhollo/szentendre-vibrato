@@ -17,9 +17,16 @@
 			]
 		}
 	],
-	"person": [],
+	"person": [
+		{
+			"name": "Első személy"
+		},
+		{
+			"name": "Második személy"
+		}
+	],
 	"photo": [],
 	"admin-category": "person",
-	"category": "poi",
+	"category": "person",
 	"collection": []
 }
