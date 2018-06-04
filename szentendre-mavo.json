@@ -1,7 +1,10 @@
 {
 	"poi": [
 		{
-			"name": "Yello Str."
+			"name": [
+				"Yello Str."
+			],
+			"address": "Villányi út 60."
 		},
 		{
 			"name": [
@@ -20,7 +23,9 @@
 				"Bello u."
 			]
 		},
-		{}
+		{
+			"name": []
+		}
 	],
 	"person": [],
 	"photo": [],
