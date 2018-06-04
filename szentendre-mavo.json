@@ -2,5 +2,6 @@
 	"admin.category": "poi",
 	"poi": [],
 	"person": [],
-	"photo": []
+	"photo": [],
+	"admin-category": "person"
 }
