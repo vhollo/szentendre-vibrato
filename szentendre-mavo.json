@@ -26,11 +26,6 @@
 				"Lakásom!"
 			],
 			"builder": []
-		},
-		{
-			"name": [],
-			"function": [],
-			"builder": []
 		}
 	],
 	"person": [
@@ -39,6 +34,9 @@
 		},
 		{
 			"name": "Második személy"
+		},
+		{
+			"name": "Harmadik személy"
 		}
 	],
 	"photo": [
